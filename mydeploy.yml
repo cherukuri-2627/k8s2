@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: myjavaapp-container
-        image: admin9666/k8s_pipeline:tagVersion
+        image: admin9666/k8s_pipeline:${BUILD_NUMBER}
         ports:
         - containerPort: 8080
