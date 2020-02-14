@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s_pipeline
+  name: k8spipeline
   labels:
-    app: k8s_pipeline
+    app: k8spipeline
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: k8s_pipeline
+      app: k8spipeline
   template:
     metadata:
       labels:
-        app: k8s_pipeline
+        app: k8spipeline
     spec:
       containers:
       - name: myjavaapp-container
-        image: admin9666/k8s_pipeline:${BUILD_NUMBER}
+        image: admin9666/k8spipeline:${BUILD_NUMBER}
         ports:
         - containerPort: 8080
